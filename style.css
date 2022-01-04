@@ -1,0 +1,128 @@
+/* dark theme */
+:root {
+    --dark: #282A35; 
+    --dark2: #282a35;
+    --light: #04AA6B;
+    --light2: #fff;
+}
+
+/* light theme */
+/* :root {
+    --dark: #f7f7f7;
+    --dark2: #282a35;
+    --light: #282A35;
+    --light2: #04aa6b;
+
+} */
+
+body {
+    background-color: var(--dark);
+}
+
+header {
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--light);
+    font-size: 250%;
+    margin: 10px;
+}
+
+header p {
+    color: var(--light2);
+    margin: 20px;
+    font-size: 110%;
+    padding-bottom: 20px;
+}
+
+section {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    width: 100%;
+}
+
+figure {
+    border: dashed var(--light2) 2px;
+    margin: 20px 10px 20px 10px;
+    flex: 1 0 100%;
+    transition: all 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Place on both the original and altered element to 
+transition both in and out. Use in conjuction with 
+the transform property for cool effects. */
+
+figure:hover,
+figure:hover h2 {
+    box-shadow: 0px 0px 20px 3px var(--light);
+    transition: all 500ms ease-in-out;
+}
+
+figure p {
+    color: var(--light);
+    margin: 0px 20px 20px;
+    font-size: 110%;
+}
+    
+pre {
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--light2);
+    background-color: var(--light);
+    background: linear-gradient(var(--light) 0%, 60%, var(--dark2) 92%);
+    margin: 20px;
+    height: 100%;
+    user-select: all;
+}
+
+h2 {
+    color: var(--light);
+    font-size: 200%;
+    margin: 0px 20px;
+    border: solid var(--light2) 2px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--dark);
+    bottom:20px;
+    transition: all 500ms ease-in-out;
+}
+
+h3 {
+    color: var(--light);
+    font-size: 150%;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    header p {
+        width: 75%;
+    }
+    figure {
+        flex: 1 0 49%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header p {
+        width: 75%;
+    }
+    figure {
+        flex: 1 0 30%;
+    }
+}

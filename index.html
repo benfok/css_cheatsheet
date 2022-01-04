@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            CSS Snippet Cheatsheet
+        </h1>
+        <p>
+            Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy. 
+        </p>
+    </header>
+    <main>
+        <section>
+            <figure>
+                <h2>Declare Variables</h2>
+                <p>Declare variables that can be referenced throughout the code and changed globally.</p>
+                <pre>
+:root {
+    /* declare with `--` syntax */
+    --dark: #13293d;
+    --light: #fff;
+    }
+
+    /* call using var() */
+    var(--dark);</pre>
+            </figure>
+            <figure>
+                <h2>Pseudo Classes</h2>
+                <p>Use built-in classes to target specific elements by position within the code structure or action by the user.</p>
+                <pre>
+button:hover {
+}
+
+button:active {
+}
+
+button:focus {
+}</pre>
+            </figure>
+            <figure>
+                <h2>Media Queries</h2>
+                <p>Defining breakpoints based on viewport width to trigger changes to the CSS. From a mobile first perspective:</p>
+                <pre>
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 576px) {}</pre>
+            </figure>
+            <figure>
+                <h2>Flexbox [Parent]</h2>
+                <p>Set the parameter properties on the container or parent element</p>
+                <pre>
+.row-parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    }</pre>
+            </figure>
+            <figure>
+                <h2>Flexbox [Child]</h2>
+                <p>Properties on the child elements determine behavior relative to one another. Flex-basis determines the default or attempted width. </p>
+                <pre>
+figure-child {
+    flex: 1 0 100%;
+}</pre>
+            </figure>
+            <figure>
+                <h2>Transitions</h2>
+                <p>Create smooth transitions between CSS states</p>
+                <pre>
+/* Place on both the original and altered 
+element to transition both in and out. 
+Use in conjuction with the transform property 
+for cool effects. */
+
+figure:hover,
+figure:hover h2 {
+    box-shadow: 0px 0px 20px 3px var(--light);
+    transition: all 500ms ease-in-out;
+}</pre>
+            </figure>
+        </section>
+
+    </main>
+    <footer>
+       <h3>Made by moi</h3>
+    </footer>
+    
+</body>
+</html>
